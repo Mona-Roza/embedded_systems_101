@@ -11,6 +11,7 @@
       - [Von Neumann Mimarisi](#von-neumann-mimarisi)
       - [Harvard Mimarisi](#harvard-mimarisi)
   - [Mikroişlemci ve Mikrodenetleyici Arasındaki Farklar](#mikroişlemci-ve-mikrodenetleyici-arasındaki-farklar)
+  - [Mikrodenetleyici Programlama](#mikrodenetleyici-programlama)
   - [Kaynaklar](#kaynaklar)
 
 ## Gömülü Sistem
@@ -115,6 +116,8 @@ bulunur.
 
 * Mikrodenetleyiciler, elektronik devrelerde beyin görevi görür, elektronik sistemleri kontrol etmemizi sağlarlar.
 
+* Mikrodenetleyiciler etrafımızdaki çoğu elektronik eşyada bulunmakta ve en çok gömülü sistemlerde kullanılmaktadırlar. 
+
 ### Mikrodenetleyici Mimarileri
 
 Mikrodenetleyiciler mimarilerine göre ikiye ayrılmaktadırlar.
@@ -147,6 +150,53 @@ Harvard Mimarisinde işlenecek komutlar ve verilerin bulunduğu RAM ayrıdır ve
 * Mikroişlemciler ek birimlere ihtiyaç duyduklarından maliyeti daha ağırdır.
 
 * Mikroişlemciler aynı anda çoklu işlem yapabilirken mikrodenetleyiciler tek bir iş yapabilmektedir.
+
+## Mikrodenetleyici Programlama
+
+Mikrodenetleyicilerin yapısında bulunan CPU sayesinde, programlanabilir yapıdadırlar. Bu programlama işlemi için komut satırlarından oluşan bir yazılıma ihtiyaç vardır. 
+
+* Her mikrodenetleyici için farklı derleyici ve kod aktarımı için farklı programlar mevcuttur.
+
+* Mikrodenetleyicilerin programlanabilmesi için programlayıcı bir karta veya programlama yapan bir programa ihtiyaç duyulur. 
+
+* Mikrodenetleyicilere derlenen kodun hex dosyaları -yani makina diline çevrilmiş dosyalar- yüklenir.
+
+* Mikrodenetleyici ve mikroişlemcilerde işlem tek sseferde bitirilemeyeceği için işlemci frekansına bağlı işletilecek bir sonsuz döngü kullanılır. 
+
+```c
+// Aşağıda sonsuz döngü içerisinde sürekli 
+// kontrolle çalışacak bir programın pseudo 
+// kodu bulunmaktadır.
+int main(){
+    int a, b, c;
+    while(1){
+        a = read(11);
+        if(a<512)
+            out(12, HIGH);
+        else
+            out(12, LOW);
+    }
+}
+```
+```c
+// Aşağıda sonsuz döngü içerisinde sensör
+// uyarımı geldiğinde çalışacak bir kesme
+// fonksiyonu 
+int main(){
+    while(1){
+        interrupt.enable();
+    }
+}
+
+interrupt dur(){
+    a = read(11);
+    .
+    .
+    .
+}
+```
+
+
 
 ## Kaynaklar
 
