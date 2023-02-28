@@ -133,6 +133,7 @@ Harvard Mimarisinde işlenecek komutlar ve verilerin bulunduğu RAM ayrıdır ve
 |---|---|
 | <img src="images/Von_Neumann_Architecture-tr.svg.png"> | <img src="images/Harvard_Mimarisi_Şeması.png"> |
 | [Resim 3.2](https://tr.wikipedia.org/wiki/Neumann_mimarisi) | [Resim 3.3](https://tr.wikipedia.org/wiki/Harvard_mimarisi) |
+
 ## Mikroişlemci ve Mikrodenetleyici Arasındaki Farklar
 
 * Gerçek zamanlı işlemlerde mikrodenetleyici daha iyi performans gösterir.
