@@ -12,6 +12,7 @@
       - [Harvard Mimarisi](#harvard-mimarisi)
   - [Mikroişlemci ve Mikrodenetleyici Arasındaki Farklar](#mikroişlemci-ve-mikrodenetleyici-arasındaki-farklar)
   - [Mikrodenetleyici Programlama](#mikrodenetleyici-programlama)
+  - [Gömülü Sistem Tasarım Aşamaları](#gömülü-sistem-tasarım-aşamaları)
   - [Kaynaklar](#kaynaklar)
 
 ## Gömülü Sistem
@@ -196,7 +197,33 @@ interrupt dur(){
 }
 ```
 
+## Gömülü Sistem Tasarım Aşamaları
 
+:warning: Gömülü Sistemlerde her zaman en çok özelliğe sahip mikrokontrolcü ya da mikroişlemcinin kullanılması ya da kompleks komponentlerin kullanılması gerekmez. Asıl amaç işin görülmesi ve az maliyettir. Komponent seçimlerinde gömülü sistemin sabit bir işlemi yapacağı unutulmamalıdır.
+
+1. Tasarlanacak sistemde ihtiyaç duyulan komponentler belirlenir. 
+
+2. Tasarlanacak istemin kağıt üzerinde taslağı oluştulur. Teorik sistem hazırdır.
+
+3. Hazırlanmış teorik sistem, programlar yardımı ile simüle edilir.
+
+4. Sistemin giriş ve çıkış birimleri tamamlanır.
+
+5. Algoritma çıkartılır.
+
+6. Kodlama yapılır.
+
+7. Debug yapılır.
+
+8. Sabit veriler girilip hesaplamalar yapılır.
+
+9. Devre breadboard üzerinde taslak olarak kurulur.
+
+10. Entegreler ve mikrodenetleyiciler bağlanmadan önce gerilim kontrolü yapılır.
+
+11. Derlenen .hex kod mikrodenetleyiciye yüklenir ve devre test edilir.
+
+12. Testleri tamamlanan devre kurulur ve sistem tamamlanır.
 
 ## Kaynaklar
 
